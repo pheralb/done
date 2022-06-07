@@ -6,9 +6,13 @@ import * as path from 'path';
 import { VitePWA } from "vite-plugin-pwa";
 import manifest from "./manifest.json";
 
+// vite-tsconfig-paths ->
+import tsconfigPaths from "vite-tsconfig-paths";
+
 export default defineConfig({
   plugins: [
     react(),
+    tsconfigPaths(),
     VitePWA({
       manifest,
       includeAssets: [

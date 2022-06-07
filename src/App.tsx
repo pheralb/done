@@ -15,7 +15,7 @@ import { Toaster } from "react-hot-toast";
 // Pages ->
 import { Home } from "@/pages";
 
-function App() {
+const App = () => {
   return (
     <>
       <BrowserRouter>
