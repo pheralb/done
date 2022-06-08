@@ -15,20 +15,25 @@ import { Toaster } from "react-hot-toast";
 // Pages ->
 import { Home } from "@/pages";
 
+// Layout ->
+import Layout from "@/layout";
+
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <ChakraProvider theme={Theme}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Layout>
         </ChakraProvider>
       </BrowserRouter>
       <SW />
       <Toaster position="bottom-center" reverseOrder={false} />
     </>
   );
-}
+};
 
 export default App;

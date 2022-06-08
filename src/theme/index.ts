@@ -9,16 +9,16 @@ const Theme = extendTheme({
   colors: {
     bg: {
       light: "#fafafa",
-      dark: "#f5f5f5",
+      dark: "#161617",
     },
-    color: {
-      light: "#1a202c",
-      dark: "#e2e8f0",
+    border: {
+      light: "#fafafa",
+      dark: "#222225",
     }
   },
   fonts: {
     body: "Inter-Regular, sans-serif",
-    heading: "Inter-Medium, sans-serif",
+    heading: "Inter-SemiBold, sans-serif",
   },
   styles: {
     global: (props: ChakraProps) => ({
@@ -26,7 +26,7 @@ const Theme = extendTheme({
         height: "100%",
         maxHeight: "100vh",
         backgroundColor: mode("bg.light", "bg.dark")(props),
-        color: mode("color.light", "color.dark")(props),
+        fontSize: "14px",
       },
     }),
   },
