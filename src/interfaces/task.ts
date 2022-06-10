@@ -4,7 +4,7 @@ export interface TaskProps {
   title?: string;
   description?: string;
   group?: string;
-  createdAt?: number;
+  createdAt?: string;
   completed?: boolean;
 }
 

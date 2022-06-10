@@ -1,24 +1,14 @@
-import { useContext } from "react";
-import { TaskContext } from "@/context/taskContext";
-import { Button } from "@chakra-ui/react";
+import { useTask } from "@/context/taskContext";
+import TaskItem from "@/components/task/item";
 
-type Props = {};
-
-const TaskList = (props: Props) => {
-  const { tasksData, createTask } = useContext(TaskContext);
-
-  const handleClick = () => {
-    createTask({
-      title: "New Task",
-      description: "New Task Description",
-      group: "New Task Group",
-    });
-  };
-
+const TaskList = () => {
+  const { tasksData } = useTask();
   return (
-    <div>
-      <Button onClick={handleClick}>Create task</Button>
-    </div>
+    <>
+      {tasksData.tasks.map((task) => (
+        <TaskItem key={task.id} {...task} />
+      ))}
+    </>
   );
 };
 

@@ -36,7 +36,7 @@ const App = () => {
         </ChakraProvider>
       </BrowserRouter>
       <SW />
-      <Toaster position="bottom-center" reverseOrder={false} />
+      <Toaster position="bottom-right" reverseOrder={false} />
     </>
   );
 };

@@ -26,16 +26,22 @@ export const TaskProvider = ({ children }: TaskProviderProps) => {
 
   // Create new task ->
   const createTask = (task: TaskProps) => {
+    const d = new Date();
     setTasksData({
       ...tasksData,
       tasks: [
         ...tasksData.tasks,
-        { id: nanoid(6), createdAt: Date.now(), completed: false, ...task },
+        {
+          id: nanoid(6),
+          createdAt: d.toLocaleDateString(),
+          completed: false,
+          ...task,
+        },
       ],
       taskCount: tasksData.taskCount + 1,
       pending: tasksData.pending + 1,
     });
-    toast("New task created", {
+    toast(`${task.title} created`, {
       icon: "🥳",
       style: toastStyle,
     });

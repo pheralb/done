@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import { TaskProps, TaskState } from "@/interfaces/task";
 
 export type TaskContextProps = {
@@ -9,3 +9,5 @@ export type TaskContextProps = {
 export const TaskContext = createContext<TaskContextProps>(
   {} as TaskContextProps
 );
+
+export const useTask = () => useContext(TaskContext);

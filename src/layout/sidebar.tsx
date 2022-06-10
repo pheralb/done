@@ -3,6 +3,7 @@ import { Box, Divider, Flex, useColorModeValue } from "@chakra-ui/react";
 import Item from "@/layout/item";
 import { Check, Gear, PaperPlaneTilt, Star, SunDim, Wrench } from "phosphor-react";
 import Auth from "@/components/auth";
+import Create from "@/components/task/create";
 
 const Sidebar = (props: SidebarProps) => {
   const bg = useColorModeValue("bg.light", "bg.dark");
@@ -24,6 +25,7 @@ const Sidebar = (props: SidebarProps) => {
     >
       <Flex as="nav" direction="column" px="4" py="7">
         <Auth />
+        <Create />
         <Divider mt="2" mb="2" borderColor="border.dark" />
         <Item title="My day" icon={<SunDim size={18} weight="bold" />}>
           My day
