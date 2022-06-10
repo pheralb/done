@@ -1,3 +1,4 @@
+// Sidebar ->
 export interface SidebarProps {
   width?: string;
   display?: object;

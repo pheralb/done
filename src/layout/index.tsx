@@ -8,7 +8,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import Sidebar from "@/layout/sidebar";
-import { SidebarProps } from "@/interfaces/components";
+import { SidebarProps } from "@/interfaces/sidebar";
 import { List } from "phosphor-react";
 
 const Index = (props: SidebarProps) => {

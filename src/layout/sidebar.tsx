@@ -1,10 +1,11 @@
-import { SidebarProps } from "@/interfaces/components";
-import { Box, Divider, Flex } from "@chakra-ui/react";
+import { SidebarProps } from "@/interfaces/sidebar";
+import { Box, Divider, Flex, useColorModeValue } from "@chakra-ui/react";
 import Item from "@/layout/item";
-import { Gear, PaperPlaneTilt, Star, SunDim, Wrench } from "phosphor-react";
+import { Check, Gear, PaperPlaneTilt, Star, SunDim, Wrench } from "phosphor-react";
 import Auth from "@/components/auth";
 
 const Sidebar = (props: SidebarProps) => {
+  const bg = useColorModeValue("bg.light", "bg.dark");
   return (
     <Box
       as="nav"
@@ -13,17 +14,17 @@ const Sidebar = (props: SidebarProps) => {
       left="0"
       zIndex="sticky"
       h="full"
-      pb="10"
       overflowX="hidden"
       overflowY="auto"
+      bg={bg}
       borderRightWidth="2px"
       borderColor="border.dark"
       w="60"
       {...props}
     >
-      <Flex as="nav" direction="column" px="4" py="5">
+      <Flex as="nav" direction="column" px="4" py="7">
         <Auth />
-        <Divider mb="2" borderColor="border.dark" />
+        <Divider mt="2" mb="2" borderColor="border.dark" />
         <Item title="My day" icon={<SunDim size={18} weight="bold" />}>
           My day
         </Item>
@@ -36,8 +37,8 @@ const Sidebar = (props: SidebarProps) => {
         >
           Planning
         </Item>
-        <Item title="Work" icon={<Wrench size={18} weight="bold" />}>
-          Work
+        <Item title="Work" icon={<Check size={18} weight="bold" />}>
+          Completed
         </Item>
         <Divider mt="2" mb="2" borderColor="border.dark" />
         <Item title="Work" icon={<Gear size={18} weight="bold" />}>

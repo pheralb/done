@@ -1,5 +1,7 @@
+import TaskList from "@/components/task/list";
+
 const Home = () => {
-  return <div>Home</div>;
+  return <TaskList />;
 };
 
 export default Home;

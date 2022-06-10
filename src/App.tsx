@@ -18,16 +18,21 @@ import { Home } from "@/pages";
 // Layout ->
 import Layout from "@/layout";
 
+// Task Provider ->
+import { TaskProvider } from "@/context/taskProvider";
+
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <ChakraProvider theme={Theme}>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </Layout>
+          <TaskProvider>
+            <Layout>
+              <Routes>
+                <Route path="/" element={<Home />} />
+              </Routes>
+            </Layout>
+          </TaskProvider>
         </ChakraProvider>
       </BrowserRouter>
       <SW />
