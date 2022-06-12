@@ -17,6 +17,9 @@ import {
 import { useTask } from "@/context/taskContext";
 import { TaskProps } from "@/interfaces/task";
 import { Check } from "phosphor-react";
+import { useHotkeys } from "react-hotkeys-hook";
+import toast from "react-hot-toast";
+import { toastStyle } from "@/theme/toast";
 
 const Create = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -24,8 +27,21 @@ const Create = () => {
   const [task, setTask] = useState<TaskProps>();
   const { createTask } = useTask();
 
+  useHotkeys("ctrl+s", (e) => {
+    e.preventDefault();
+    handleOpen();
+  });
+
   const initialRef = useRef(null);
   const finalRef = useRef(null);
+
+  const handleOpen = () => {
+    setTask({
+      title: "",
+      description: "",
+    });
+    onOpen();
+  };
 
   const handleInput = (e: BaseSyntheticEvent) => {
     setTask({
@@ -36,15 +52,24 @@ const Create = () => {
 
   const handleCreate = (e: React.FormEvent) => {
     e.preventDefault();
-    createTask({
-      ...task,
-    });
-    onClose();
+    if (task?.title !== "") {
+      createTask({
+        ...task,
+      });
+      onClose();
+    } else {
+      toast(`Title is required`, {
+        icon: "🤔",
+        style: toastStyle,
+      });
+    }
   };
 
   return (
     <>
-      <Button onClick={onOpen}>Create task</Button>
+      <Button onClick={handleOpen} mt="2">
+        Create task (ctrl+s)
+      </Button>
       <Modal
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}
@@ -53,7 +78,7 @@ const Create = () => {
         size="lg"
       >
         <ModalOverlay />
-        <ModalContent bg={bg} borderWidth="1px">
+        <ModalContent bg={bg} borderWidth="1px" borderRadius="15px">
           <ModalHeader fontWeight="light">New task</ModalHeader>
           <ModalCloseButton />
           <ModalBody>

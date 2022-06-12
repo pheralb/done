@@ -13,9 +13,9 @@ const Item = (props: TaskProps) => {
     >
       <HStack spacing={3}>
         <Icon as={Circle} w={4} h={4} />
-        <Heading fontSize="18px" noOfLines={1}>
+        <Text fontSize="16px" noOfLines={1}>
           {props.title}
-        </Heading>
+        </Text>
       </HStack>
       <Text color="gray.500">{props.createdAt}</Text>
     </Flex>
