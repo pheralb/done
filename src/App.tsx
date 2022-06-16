@@ -4,10 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // PWA config ->
 import SW from "@/pwa";
 
-// Chakra UI & Custom Theme ->
-import { ChakraProvider } from "@chakra-ui/react";
+// CSS Styles ->
 import "@/styles/index.css";
-import Theme from "@/theme";
 
 // React-Hot-Toast ->
 import { Toaster } from "react-hot-toast";
@@ -25,15 +23,13 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <ChakraProvider theme={Theme}>
-          <TaskProvider>
-            <Layout>
-              <Routes>
-                <Route path="/" element={<Home />} />
-              </Routes>
-            </Layout>
-          </TaskProvider>
-        </ChakraProvider>
+        <TaskProvider>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Layout>
+        </TaskProvider>
       </BrowserRouter>
       <SW />
       <Toaster position="bottom-right" reverseOrder={false} />

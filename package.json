@@ -19,9 +19,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "2.2.1",
-    "@emotion/react": "11.9.0",
-    "@emotion/styled": "11.8.1",
+    "@stitches/react": "^1.2.8",
     "@supabase/supabase-js": "1.35.3",
     "boring-avatars": "1.6.3",
     "framer-motion": "6.3.10",

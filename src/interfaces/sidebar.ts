@@ -7,8 +7,8 @@ export interface SidebarProps {
 }
 
 export interface SidebarItemProps {
-  icon: React.ReactElement;
   title: string;
+  icon?: string;
   onClick?: () => void;
   children?: React.ReactNode;
 }
