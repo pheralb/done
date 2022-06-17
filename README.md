@@ -9,11 +9,14 @@
 ## 📦 Packages:
 
 - ⚡️ [Vitejs](https://vitejs.dev/) - Next generation frontend tooling.
-- ☁️ [Vitejs PWA](https://vite-plugin-pwa.netlify.app/) - Zero-config PWA Framework-agnostic Plugin for Vite.
 - ⚒️ [React 18](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - 💙 [Typescript](https://www.typescriptlang.org/) - A superset of JavaScript.
-- 💅 [Chakra UI](https://chakra-ui.com/) - Accessible component library.
+- 💅 [Stitches.js](https://stitches.dev/) - CSS-in-JS with near-zero runtime.
+- 📦 [Radix-UI Primitives](https://radix-ui.com/) - Accessible components for building high‑quality design systems.
+- 🎨 [Radix-UI Colors](https://radix-ui.com/colors) - A collection of colors for use in Radix-UI.
 - 💥 [Framer Motion](https://www.framer.com/motion/) - Production-ready motion library.
+- ☁️ [Supabase](https://supabase.com/) - An open source Firebase alternative.
+- ⬇️ [vite-plugin-pwa](https://vite-plugin-pwa.netlify.app/) - Zero-config PWA Framework-agnostic Plugin for Vite.
 
 ## ⚒️ Getting Started:
 

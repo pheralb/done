@@ -6,6 +6,7 @@ import SW from "@/pwa";
 
 // CSS Styles ->
 import "@/styles/index.css";
+import { globalStyles } from "@/theme";
 
 // React-Hot-Toast ->
 import { Toaster } from "react-hot-toast";
@@ -20,6 +21,7 @@ import Layout from "@/layout";
 import { TaskProvider } from "@/context/taskProvider";
 
 const App = () => {
+  globalStyles();
   return (
     <>
       <BrowserRouter>
