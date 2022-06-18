@@ -12,7 +12,6 @@
 - ⚒️ [React 18](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - 💙 [Typescript](https://www.typescriptlang.org/) - A superset of JavaScript.
 - 💅 [Stitches.js](https://stitches.dev/) - CSS-in-JS with near-zero runtime.
-- 📦 [Radix-UI Primitives](https://radix-ui.com/) - Accessible components for building high‑quality design systems.
 - 🎨 [Radix-UI Colors](https://radix-ui.com/colors) - A collection of colors for use in Radix-UI.
 - 💥 [Framer Motion](https://www.framer.com/motion/) - Production-ready motion library.
 - ☁️ [Supabase](https://supabase.com/) - An open source Firebase alternative.
