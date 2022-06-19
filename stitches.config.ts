@@ -22,29 +22,29 @@ export const {
 } = createStitches({
   theme: {
     colors: {
+      background: "$gray1",
+      text: "$gray13",
+      border: "$gray5",
       ...gray,
       ...blue,
       ...red,
       ...green,
     },
-  },
-  media: {
-    bp1: "(min-width: 480px)",
-  },
-  utils: {
-    marginX: (value: number) => ({ marginLeft: value, marginRight: value }),
+    fonts: {
+      sans: "Inter-Regular",
+    },
   },
 });
 
-// Dark Theme:
-const darkTheme = createTheme({
+// Dark mode:
+export const darkTheme = createTheme({
   colors: {
+    background: "$grayDark1",
+    text: "$grayDark2",
+    border: "$grayDark12",
     ...grayDark,
     ...blueDark,
     ...redDark,
     ...greenDark,
   },
 });
-
-// Global CSS:
-

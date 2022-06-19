@@ -10,6 +10,7 @@ import {
 
 import Auth from "@/components/auth";
 import Create from "@/components/task/create";
+import ChangeTheme from "@/components/theme/change";
 
 // Sidebar Imports:
 import { SidebarProps } from "@/interfaces/sidebar";
@@ -32,6 +33,7 @@ const Index = (props: SidebarProps) => {
       <SidebarStyle>
         <Auth />
         <Create />
+        <ChangeTheme />
         <Item title="My day">My day</Item>
         <Item title="Important">Important</Item>
         <Item title="Planning">Planning</Item>

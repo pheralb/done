@@ -1,11 +1,8 @@
-import React from 'react'
+import { ButtonProps } from "@/interfaces/button";
+import { ButtonStyled } from "./style";
 
-type Props = {}
+const Index = (props: ButtonProps) => {
+  return <ButtonStyled {...props}>{props.children}</ButtonStyled>;
+};
 
-const Index = (props: Props) => {
-  return (
-    <div>Index</div>
-  )
-}
-
-export default Index
+export default Index;

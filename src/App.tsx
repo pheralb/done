@@ -6,6 +6,7 @@ import SW from "@/pwa";
 
 // CSS Styles ->
 import "@/styles/index.css";
+import { darkTheme } from "stitches.config";
 import { globalStyles } from "@/theme";
 
 // React-Hot-Toast ->
@@ -20,10 +21,20 @@ import Layout from "@/layout";
 // Task Provider ->
 import { TaskProvider } from "@/context/taskProvider";
 
+// Theme Provider ->
+import { ThemeProvider } from "next-themes";
+
 const App = () => {
   globalStyles();
   return (
-    <>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      value={{
+        light: "light",
+        dark: darkTheme.className,
+      }}
+    >
       <BrowserRouter>
         <TaskProvider>
           <Layout>
@@ -35,7 +46,7 @@ const App = () => {
       </BrowserRouter>
       <SW />
       <Toaster position="bottom-right" reverseOrder={false} />
-    </>
+    </ThemeProvider>
   );
 };
 

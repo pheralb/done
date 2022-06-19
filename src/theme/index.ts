@@ -6,12 +6,12 @@ export const globalStyles = globalCss({
     padding: 0,
     margin: 0,
     // Fonts:
-    fontFamily: "Inter-Regular, sans-serif",
+    fontFamily: "$sans",
     fontSize: "14px",
     // Background-color:
-    backgroundColor: "$gray12",
+    backgroundColor: "$background",
     // Color:
-    color: "$gray1",
+    color: "$text",
   },
   "*": {
     boxSizing: "border-box",

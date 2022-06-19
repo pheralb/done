@@ -5,6 +5,7 @@ import { Check } from "phosphor-react";
 import { useHotkeys } from "react-hotkeys-hook";
 import toast from "react-hot-toast";
 import { toastStyle } from "@/theme/toast";
+import Button from "@/components/button";
 
 const Create = () => {
   const [task, setTask] = useState<TaskProps>();
@@ -48,7 +49,7 @@ const Create = () => {
 
   return (
     <>
-      <button onClick={handleOpen}>Create task (ctrl+s)</button>
+      <Button onClick={handleOpen}>Create task (ctrl+s)</Button>
     </>
   );
 };
