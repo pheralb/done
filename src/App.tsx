@@ -5,9 +5,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SW from "@/pwa";
 
 // CSS Styles ->
+import { ChakraProvider } from "@chakra-ui/react";
 import "@/styles/index.css";
-import { darkTheme } from "stitches.config";
-import { globalStyles } from "@/theme";
 
 // React-Hot-Toast ->
 import { Toaster } from "react-hot-toast";
@@ -18,35 +17,19 @@ import { Home } from "@/pages";
 // Layout ->
 import Layout from "@/layout";
 
-// Task Provider ->
-import { TaskProvider } from "@/context/taskProvider";
-
-// Theme Provider ->
-import { ThemeProvider } from "next-themes";
-
 const App = () => {
-  globalStyles();
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      value={{
-        light: "light",
-        dark: darkTheme.className,
-      }}
-    >
+    <ChakraProvider>
       <BrowserRouter>
-        <TaskProvider>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </Layout>
-        </TaskProvider>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
       <SW />
       <Toaster position="bottom-right" reverseOrder={false} />
-    </ThemeProvider>
+    </ChakraProvider>
   );
 };
 
