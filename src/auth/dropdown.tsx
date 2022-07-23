@@ -4,10 +4,6 @@ import { CaretDown } from "phosphor-react";
 import { useEffect } from "react";
 
 const AuthDropdown = () => {
-  const handleLogout = () => {
-    supabaseClient.auth.logout();
-  };
-
   return (
     <Menu>
       <MenuButton as={Button} mb="3" textAlign="left" rightIcon={<CaretDown />}>
