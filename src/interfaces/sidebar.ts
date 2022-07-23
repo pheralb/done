@@ -1,3 +1,5 @@
+import { IconProps } from "@chakra-ui/react";
+
 // Sidebar ->
 export interface SidebarProps {
   width?: string;
@@ -7,8 +9,7 @@ export interface SidebarProps {
 }
 
 export interface SidebarItemProps {
-  title: string;
-  icon?: string;
+  icon: any;
   onClick?: () => void;
   children?: React.ReactNode;
 }

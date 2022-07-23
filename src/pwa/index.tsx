@@ -4,7 +4,6 @@ import { useRegisterSW } from "virtual:pwa-register/react";
 import SWUpdateMessage from "./update";
 
 function SW() {
-
   const {
     offlineReady: [offlineReady, setOfflineReady],
     needRefresh: [needRefresh, setNeedRefresh],
@@ -18,7 +17,7 @@ function SW() {
 
   useEffect(() => {
     if (offlineReady) {
-      toast("Weathr has been installed, it now works offline!", {
+      toast("Done has been installed", {
         icon: "🥳",
         style: {
           borderRadius: "10px",
@@ -28,10 +27,10 @@ function SW() {
       });
     } else if (needRefresh) {
       <SWUpdateMessage
-            message="A new version is avalible!"
-            updateBtn={updateServiceWorker}
-            closeBtn={close}
-          />
+        message="A new version is avalible!"
+        updateBtn={updateServiceWorker}
+        closeBtn={close}
+      />;
     }
   }, [close, needRefresh, offlineReady, updateServiceWorker]);
 

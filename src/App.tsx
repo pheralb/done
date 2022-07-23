@@ -7,24 +7,32 @@ import SW from "@/pwa";
 // CSS Styles ->
 import { ChakraProvider } from "@chakra-ui/react";
 import "@/styles/index.css";
+import theme from "./theme";
 
 // React-Hot-Toast ->
 import { Toaster } from "react-hot-toast";
 
 // Pages ->
-import { Home } from "@/pages";
+import { Cloud, Home, Login } from "@/pages";
 
 // Layout ->
 import Layout from "@/layout";
 
+// Providers ->
+import { TaskContextProvider } from "./context/TaskContext";
+
 const App = () => {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
+          <TaskContextProvider>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/cloud" element={<Cloud />} />
+            </Routes>
+          </TaskContextProvider>
         </Layout>
       </BrowserRouter>
       <SW />
